@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #include "scheduler.h"
 
 Task tasks[MAX];
@@ -18,11 +19,18 @@ void addTaskFile() {
     printf("Task Name: ");
     scanf("%s", t.name);
 
+    for(int i = 0; t.name[i] != '\0'; i++) {
+
+        if(t.name[i] >= 'a' && t.name[i] <= 'z') {
+            t.name[i] = t.name[i] - 32;
+        }
+    }
+
     printf("Duration: ");
-    scanf("%d ", &t.duration);
+    scanf("%d", &t.duration);
 
     printf("Deadline: ");
-    scanf("%d ", &t.deadline);
+    scanf("%d", &t.deadline);
 
     printf("Priority(Important level): ");
     scanf("%d", &t.priority);
@@ -31,7 +39,7 @@ void addTaskFile() {
     scanf("%d", &t.dependency);
 
     fprintf(fp,
-        "name : %s / duration : %d hour(s) / deadline : %d hour(s) priority : %d / dependency : %d\n",
+        "%s %d %d %d %d\n",
         t.name,
         t.duration,
         t.deadline,
