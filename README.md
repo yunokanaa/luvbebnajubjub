@@ -4,7 +4,7 @@
 
 Smart Scheduler is a C programming project that automatically creates a task schedule using Graph algorithms, Topological Sort, and Greedy Scheduling.
 
-The system reads tasks from a file, checks dependencies, detects cycles, sorts tasks by priority, and generates a schedule automatically.
+The system reads tasks from a file, checks dependencies, detects cycles, sorts tasks by priority, and generates a schedule and automatically update in text file.
 
 ---
 
