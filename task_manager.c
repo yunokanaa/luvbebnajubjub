@@ -22,7 +22,7 @@ void addTaskFile() {
     scanf("%d ", &t.duration);
 
     printf("Deadline: ");
-    scanf("%d hour(s)", &t.deadline);
+    scanf("%d ", &t.deadline);
 
     printf("Priority(Important level): ");
     scanf("%d", &t.priority);
@@ -31,7 +31,7 @@ void addTaskFile() {
     scanf("%d", &t.dependency);
 
     fprintf(fp,
-        "%s %d %d %d %d\n",
+        "name : %s / duration : %d hour(s) / deadline : %d hour(s) priority : %d / dependency : %d\n",
         t.name,
         t.duration,
         t.deadline,
