@@ -201,7 +201,8 @@ Project : 3 -> 6
 
 * Priority scheduling
 * Schedule generation
-* Export schedule
+* File handling
+* Exporting and updating schedule files
 
 ---
 
